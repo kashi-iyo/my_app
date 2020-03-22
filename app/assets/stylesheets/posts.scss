@@ -1,0 +1,187 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 投稿一覧
+.PostsWrap {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 88%;
+    & .form-error {
+      position: relative;
+      left: 50px;
+      letter-spacing: 2px;
+      color: rgb(121, 0, 0);
+    }
+    & .posts-h1 {
+        position: relative;
+        left: 50px;
+        margin: 50px 0;
+        color: rgb(83, 83, 83);
+    }
+    & .posts {
+        position: relative;
+        width: 90%;
+        height: 100vh;
+        min-height: auto;
+        left: 50px;
+        background: rgba(0, 190, 190, 0.104);
+        &__time {
+          position: absolute;
+          right: 85px;
+          top: 125px;
+          color: rgb(39, 39, 39);
+          padding: 5px 0;
+          font-size: 0.6rem;
+          letter-spacing: 2px;
+        }
+        &__list {
+            position: absolute;
+            top: 20px;
+            left: 10%;
+            padding: 20px 20px;
+            width: 80%;
+            height: 130px;
+            background: white;
+            border: 1.5px solid rgba(143, 143, 143, 0.219);
+            border-radius: 4px;
+            margin: 0 auto;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            box-shadow: 0 32px 30px -30px rgba(53, 47, 47, 0.15);
+            overflow: hidden;
+            & a {
+              font-weight: 500;
+              color: rgb(83, 83, 83);
+            }
+        }
+    }
+}
+
+// 新規投稿
+.form{
+    position: relative;
+    left: 50px;
+    width: 500px;
+    height: 250px;
+    & textarea {
+        padding: 20px;
+        position: absolute;
+        border: transparent;
+        width: 500px;
+        height: 150px;
+        border-radius: 4px;
+        outline: none;
+        color: rgb(83, 83, 83);
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        font-weight: 500;
+        border: 1px solid rgba(0, 78, 78, 0.4);
+    }
+    & input[type="submit"] {
+        position: absolute;
+        left: 400px;
+        top: 170px;
+        width: 100px;
+        height: 50px;
+        margin: 0 auto;
+        border: transparent;
+        border-radius: 4px;
+        background: rgb(0, 78, 78);
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+        font-weight: 500;
+        color: rgb(206, 206, 206);
+        cursor: pointer;
+
+    }
+}
+
+// 投稿詳細
+.posts-show {
+  & .posts {
+    margin: 0;
+    position: relative;
+    width: 90%;
+    height: 50vh;
+    min-height: auto;
+    left: 50px;
+    background: rgba(0, 190, 190, 0.104);
+      &__time {
+        position: absolute;
+        right: 90px;
+        top: 190px;
+        width: 200px;
+        color: rgb(83, 83, 83);
+        padding: 5px 0;
+        font-size: 1rem;
+        letter-spacing: 2px;
+      }
+      &__list {
+          position: absolute;
+          top: 20px;
+          left: 10%;
+          padding: 20px 20px;
+          width: 80%;
+          height: 200px;
+          background: white;
+          border: 1.5px solid rgba(143, 143, 143, 0.219);
+          border-radius: 6px;
+          margin: 0 auto;
+          margin-bottom: 5px;
+          box-shadow: 0 32px 30px -30px rgba(53, 47, 47, 0.15);
+          overflow: hidden;
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: rgb(83, 83, 83);
+          letter-spacing: 3px;
+          & a {
+            color: rgb(0, 78, 78);
+          }
+
+      }
+  }
+}
+
+.edit-btn {
+  display: inline-block;
+  position: relative;
+  left: 515px;
+  top: 230px;
+  width: 100px;
+  height: 50px;
+  border-radius: 4px;
+  background: rgb(0, 78, 78);
+  cursor: pointer;
+  text-align: center;
+   a {
+    position: relative;
+    top: 25%;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    font-weight: 500;
+    color: rgb(250, 239, 255);
+  }
+}
+.destroy-btn {
+  display: inline-block;
+  position: relative;
+  left: 535px;
+  top: 230px;
+  width: 100px;
+  height: 50px;
+  border-radius: 4px;
+  background: rgb(0, 78, 78);
+  cursor: pointer;
+  text-align: center;
+   a {
+    position: relative;
+    top: 25%;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    font-weight: 500;
+    color: rgb(250, 239, 255);
+  }
+}

@@ -1,0 +1,19 @@
+<div class="PostsWrap">
+  <h1 class="posts-h1">投稿してみ？？</h1>
+
+<%= form_tag("/posts/create") do %>
+
+  <% @post.errors.full_messages.each do |message| %>
+    <p class="form-error"><%= message %></p>
+  <% end %>
+
+  <div class="form">
+
+    <textarea name="content"><%= @post.content %></textarea>
+    <input type="submit" value="投稿">
+
+  </div>
+
+  <% end %>
+
+</div>

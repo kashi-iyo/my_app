@@ -1,0 +1,18 @@
+<div class="PostsWrap">
+  <h1 class="posts-h1">編集するの？</h1>
+  <div class="posts-edit">
+
+<% form_tag("/posts/#{@post.id}/update") do %>
+
+    <div class="posts">
+      <p class="posts__edit">
+        <textarea><%= @post.content %></textarea>
+      </p>
+      <input type="submit" name="content" value="編集決定">
+
+    </div>
+
+<% end %>
+
+  </div>
+</div>

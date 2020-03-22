@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans|Oswald:600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+
+      <div class="flash">
+
+        <%= flash[:notice] %>
+
+      </div>
+
+    <% end %>
+    <header class="Header">
+        <div class="Header__top">
+            <p class="Header__top__icon">
+              <%= link_to("HOME", "/") %>
+            </p>
+        </div>
+        <div class="Header__bottom">
+            <ul class="Header__bottom__ul">
+                <li>
+                    <%= link_to("新規投稿", "/posts/new") %>
+                </li>
+                <li>
+                    <%= link_to("投稿一覧", "/posts/index") %>
+                </li>
+                <li>
+                    ユーザー一覧
+                </li>
+                <li>
+                    ログイン
+                </li>
+                <li>
+                    新規登録
+                </li>
+                <li>
+                    ログアウト
+                </li>
+            </ul>
+        </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>
