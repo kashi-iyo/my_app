@@ -1,17 +1,20 @@
 <div class="PostsWrap">
   <h1 class="posts-h1">チャット形式やで</h1>
 
+  <ul class="posts">
+
   <% @posts.each do |post| %>
 
-  <ul class="posts">
+
     <li class="posts__list">
       <%= link_to(post.content, "/posts/#{post.id}/show") %>
     </li>
     <li class="posts__time">
-      <%= post.updated_at %>
+      <%= post.created_at %>
     </li>
-  </ul>
 
   <% end %>
+
+  </ul>
 
 </div>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post "posts/:id/destroy" => "posts#destroy"
   post "posts/:id/update" => "posts#update"
   get "posts/:id/edit" => "posts#edit"
   get "posts/:id/show" => "posts#show"

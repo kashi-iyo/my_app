@@ -27,13 +27,20 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find_by(id: params[:id])
-    @post.contet = params[:content]
+    @post.content = params[:content]
     if @post.save
       flash[:notice] = "編集が完了したお"
       redirect_to("/posts/index")
     else
       render("posts/show")
     end
+  end
+
+  def destroy
+    @post = Post.find_by(id: params[:id])
+    @post.destroy
+    flash[:notice] = "削除が完了したお"
+    redirect_to("/posts/index")
   end
 
 end
