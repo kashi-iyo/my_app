@@ -1,0 +1,25 @@
+<div class="UsersWrap">
+  <h1 class="users-h1">新規登録</h1>
+
+  <div class="form">
+
+    <%= form_tag("/users/create") do %>
+
+      <label for="name">
+        名前<input type="text" id="name" name="name" value="">
+      </label>
+      <label for="email">
+        メールアドレス<input type="text" id="email" name="email" value="">
+      </label>
+      <label for="password">
+        パスワード<input type="password" id="password" name="password">
+      </label>
+
+      <input type="submit" value="登録">
+
+        <% end %>
+  </div>
+
+
+
+</div>
