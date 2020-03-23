@@ -1,0 +1,38 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.UsersWrap {
+    position: absolute;
+    right: 0;
+    width: 88%;
+    & .users-h1 {
+        margin: 50px;
+        margin-left: 190px;
+        color: rgb(83, 83, 83);
+    }
+    .users-box {
+        margin-left: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 200px);
+        grid-template-rows: repeat(auto-fit, 200px);
+        gap: 40px;
+        & .users-index {
+            border: 1px solid rgba(160, 160, 160, 0.100);
+            border-radius: 4px;
+            background: white;
+            text-align: center;
+            color: rgb(83, 83, 83);
+            & .users-img {
+                margin: 25px auto;
+                width: 100px;
+                height: 100px;
+                background: skyblue;
+                border-radius: 50%;
+            }
+            & .name {
+                margin-bottom: 5px;
+            }
+
+        }
+    }
+}

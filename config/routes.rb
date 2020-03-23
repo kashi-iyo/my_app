@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get "users/index" => "users#index"
+
+  get 'users/index'
   post "posts/:id/destroy" => "posts#destroy"
   post "posts/:id/update" => "posts#update"
   get "posts/:id/edit" => "posts#edit"
