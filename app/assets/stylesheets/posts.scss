@@ -62,6 +62,8 @@
         border: transparent;
         width: 500px;
         height: 150px;
+        top: 50px;
+        left: 130px;
         border-radius: 4px;
         outline: none;
         color: rgb(83, 83, 83);
@@ -72,11 +74,9 @@
     }
     & input[type="submit"] {
         position: absolute;
-        left: 400px;
-        top: 170px;
+        left: 420px;
         width: 100px;
         height: 50px;
-        margin: 0 auto;
         border: transparent;
         border-radius: 4px;
         background: rgb(0, 78, 78);

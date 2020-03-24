@@ -1,0 +1,23 @@
+<div class="UsersWrap">
+  <h1 class="users-h1">ユーザー詳細</h1>
+
+  <div class="users-show-box">
+
+    <div class="users-show-index">
+      <div class="users-show-img">
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
+      </div>
+      <div class="users-prof">
+        <div class="name">
+          <p>名前</p><%= @user.name %>
+        </div>
+        <div class="email">
+          <p>メールアドレス</p><%= @user.email %>
+        </div>
+        <p class="edit">
+          <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
