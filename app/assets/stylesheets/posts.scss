@@ -6,6 +6,7 @@
 .PostsWrap {
     position: absolute;
     top: 50px;
+    left: 115px;
     right: 0;
     width: 88%;
     & .form-error {
@@ -30,7 +31,7 @@
         &__list {
             position: relative;
             top: 30px;
-            padding: 20px 20px;
+            padding: 25px;
             width: 80%;
             height: 130px;
             background: white;
@@ -38,10 +39,12 @@
             border-radius: 4px;
             margin: 0 auto;
             margin-bottom: 5px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             letter-spacing: 3px;
             box-shadow: 0 32px 30px -30px rgba(53, 47, 47, 0.15);
             overflow: hidden;
+            font-weight: 700;
+            color: rgb(83, 83, 83);
             & a {
               font-weight: 500;
               color: rgb(83, 83, 83);
@@ -51,47 +54,53 @@
 }
 
 // 新規投稿
-.form{
-    position: relative;
-    left: 50px;
-    width: 500px;
-    height: 250px;
-    & textarea {
-        padding: 20px;
-        position: absolute;
-        border: transparent;
-        width: 500px;
-        height: 150px;
-        top: 50px;
-        left: 130px;
-        border-radius: 4px;
-        outline: none;
-        color: rgb(83, 83, 83);
-        font-size: 1.2rem;
-        letter-spacing: 3px;
-        font-weight: 500;
-        border: 1px solid rgba(0, 78, 78, 0.4);
-    }
-    & input[type="submit"] {
-        position: absolute;
-        left: 420px;
-        width: 100px;
-        height: 50px;
-        border: transparent;
-        border-radius: 4px;
-        background: rgb(0, 78, 78);
-        font-size: 0.9rem;
-        letter-spacing: 3px;
-        font-weight: 500;
-        color: rgb(206, 206, 206);
-        cursor: pointer;
+.PostsWrap {
+  & .form{
+      // position: relative;
+      // left: 50px;
+      margin-left: 10px;
+      width: 90%;
+      height: 350px;
+      border-bottom: 1px solid rgba(0, 78, 78, 0.4);
+      margin-bottom: 5px;
+      & textarea {
+          padding: 20px;
+          position: absolute;
+          border: transparent;
+          width: 500px;
+          height: 150px;
+          top: 50px;
+          left: 130px;
+          border-radius: 4px;
+          outline: none;
+          color: rgb(83, 83, 83);
+          font-size: 1.2rem;
+          letter-spacing: 3px;
+          font-weight: 500;
+          border: 1px solid rgba(0, 78, 78, 0.4);
+      }
+      & input[type="submit"] {
+          position: absolute;
+          left: 420px;
+          width: 100px;
+          height: 50px;
+          border: transparent;
+          border-radius: 4px;
+          background: rgb(0, 78, 78);
+          font-size: 0.9rem;
+          letter-spacing: 3px;
+          font-weight: 500;
+          color: rgb(206, 206, 206);
+          cursor: pointer;
 
-    }
+      }
+  }
 }
+
 .edit-btn {
   display: inline-block;
   position: relative;
-  left: 450px;
+  left: 485px;
   top: 150px;
   width: 90px;
   height: 40px;
@@ -111,7 +120,7 @@
 .destroy-btn {
   display: inline-block;
   position: relative;
-  left: 460px;
+  left: 490px;
   top: 150px;
   width: 90px;
   height: 40px;
@@ -141,7 +150,7 @@
     background: rgba(0, 190, 190, 0.104);
       &__time {
         position: relative;
-        left: 430px;
+        left: 450px;
         top: 140px;
         width: 200px;
         color: rgb(83, 83, 83);
@@ -153,8 +162,8 @@
           position: absolute;
           top: 20px;
           left: 10%;
-          padding: 20px 20px;
-          width: 70%;
+          padding: 30px;
+          width: 75%;
           height: 150px;
           background: white;
           border: 1.5px solid rgba(143, 143, 143, 0.219);
@@ -164,7 +173,7 @@
           box-shadow: 0 32px 30px -30px rgba(53, 47, 47, 0.15);
           overflow: hidden;
           font-size: 1.1rem;
-          font-weight: 500;
+          font-weight: 700;
           color: rgb(83, 83, 83);
           letter-spacing: 3px;
           & a {

@@ -1,12 +1,29 @@
 <div class="PostsWrap">
   <h1 class="posts-h1">チャット形式やで</h1>
 
+  <%= form_tag("/posts/create") do %>
+
+    <% @post.errors.full_messages.each do |message| %>
+      <p class="form-error"><%= message %></p>
+    <% end %>
+
+    <div class="form">
+
+      <textarea name="content"><%= @post.content %></textarea>
+      <input type="submit" value="投稿" style="top: 220px; right: 50px;">
+
+    </div>
+
+  <% end %>
+
 <ul class="posts">
   <% @posts.each do |post| %>
 
+  <%= link_to("/posts/#{post.id}/show") do %>
     <li class="posts__list">
-      <%= link_to(post.content, "/posts/#{post.id}/show") %>
+      <p><%= post.content %></p>
     </li>
+  <% end %>
 
   <% end %>
   </ul>

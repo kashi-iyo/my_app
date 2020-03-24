@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+
+  before_action :ensure_correct_user, {only: [:edit, :update]}
+  before_action :authenticate_user, {only: [:index, :show, :edit, :update, :logout]}
+
   def index
     @users = User.all
   end
@@ -46,4 +50,39 @@ class UsersController < ApplicationController
       render("users/edit")
     end
   end
+
+  def login_form
+  end
+
+  def login
+    @user = User.find_by(
+      email: params[:email],
+      password: params[:password]
+    )
+    if @user
+      session[:user_id] = @user.id
+      flash[:notice] = "ログインしたお"
+      redirect_to("/users/#{session[:user_id]}/show")
+    else
+      @error_message = "メールアドレスまたは、パスワードが間違っています"
+      @email = params[:email]
+      @password = params[:password]
+      render("users/login_form")
+    end
+  end
+
+  def logout
+    session[:user_id] = nil
+    flash[:notice] = "ログアウトしたお"
+    redirect_to("/users/login_form")
+  end
+
+  # ログインしているユーザーと、編集したいユーザーページが異なる場合、アクセス制限
+  def ensure_correct_user
+    if @current_user.id != params[:id].to_i
+      flash[:notice] = "あなたのアカウントではないので、入れません"
+      redirect_to("/posts/index")
+    end
+  end
+
 end

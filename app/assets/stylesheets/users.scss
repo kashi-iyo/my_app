@@ -49,7 +49,7 @@
     }
 }
 
-// 新規投稿フォーム
+// 新規登録フォーム
 .form {
         position: relative;
         width: 90%;
@@ -83,7 +83,7 @@
         }
         & input[type="submit"] {
             position: absolute;
-            right: 40px;
+            right: 160px;
             top: 350px;
             margin: auto;
             background: rgb(0, 78, 78);
@@ -92,10 +92,8 @@
             padding: 9px 30px;
             border-radius: 4px;
             cursor: pointer;
-            & a {
-              color: rgb(206, 206, 206);
-              letter-spacing: 3px;
-            }
+            color: rgb(206, 206, 206);
+            letter-spacing: 3px;
         }
     }
 
@@ -239,4 +237,62 @@
     font-size: 0.8rem;
   }
 
+}
+
+// ログイン画面
+.login_form {
+    position: relative;
+    width: 90%;
+    height: 50vh;
+    left: 40px;
+    padding-top: 50px;
+    border-radius: 4px;
+    background: rgba(0, 190, 190, 0.104);
+    & label {
+      cursor: pointer;
+        display: block;
+        height: 15%;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 70px;
+        color: rgb(83, 83, 83);
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    & input[type="text"],input[type="password"] {
+        padding: 10px;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 4px;
+        border: none;
+        color: rgb(83, 83, 83);
+        font-size: 1rem;
+        outline: transparent;
+    }
+    & input[type="submit"] {
+        position: absolute;
+        right: 160px;
+        top: 27
+
+        0px;
+        margin: auto;
+        background: rgb(0, 78, 78);
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+        padding-top: 5px;
+        color: rgb(206, 206, 206);
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+    }
+}
+
+.login_error {
+  margin-left: 40px;
+  letter-spacing: 2px;
+  color: rgb(121, 0, 0);
 }

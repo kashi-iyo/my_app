@@ -43,6 +43,8 @@ a {
         }
     }
     &__bottom {
+        position: absolute;
+        bottom: -160px;
         width: 95%;
         height: 50%;
         margin: 0 auto;
@@ -60,6 +62,25 @@ a {
         }
     }
 }
+.Header__bottom2 {
+  position: absolute;
+  bottom: -250px;
+    width: 95%;
+    height: 50%;
+    margin: 0 auto;
+    &__ul {
+        text-align: center;
+        & li {
+            color: rgb(250, 239, 255);
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            & a {
+                color: rgb(250, 239, 255);
+            }
+        }
+    }
+  }
 
 .Main {
     position: absolute;
@@ -105,4 +126,20 @@ a {
     letter-spacing: 2px;
     text-align: center;
     padding-top: 5px;
+}
+
+.session_user {
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  & a {
+    margin-right: 5px;
+    font-weight: 600;
+    color: rgb(0, 77, 57);
+  }
 }

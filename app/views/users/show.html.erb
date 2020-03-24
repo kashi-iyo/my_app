@@ -14,9 +14,11 @@
         <div class="email">
           <p>メールアドレス</p><%= @user.email %>
         </div>
+        <% if @current_user.id == @user.id.to_i %>
         <p class="edit">
           <%= link_to("編集", "/users/#{@user.id}/edit") %>
         </p>
+        <% end %>
       </div>
     </div>
   </div>

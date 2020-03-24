@@ -1,0 +1,19 @@
+<div class="UsersWrap">
+  <h1 class="users-h1">ログイン</h1>
+
+  <%= form_tag("/login") do %>
+
+  <p class="login_error"><%= @error_message %></p>
+  <div class="login_form">
+    <label for="email">
+      メールアドレス<input type="text" autocomplete="off" id="email" name="email" value="<%= @email %>">
+    </label>
+    <label for="password">
+      パスワード<input type="password" id="password" name="password" value="<%= @password %>">
+    </label>
+    <input type="submit" value="ログイン">
+  </div>
+
+  <% end %>
+
+</div>
