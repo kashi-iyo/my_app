@@ -5,7 +5,7 @@
     <div class="posts">
       <div class="posts__list">
         <img src="<%= "/user_images/#{@user.image_name}" %>">
-        <div class="posts__list__name"><%= @user.name %></div>
+        <div class="posts__list__name"><%= link_to(@user.name, "/users/#{@user.id}/show") %></div>
         <div class="posts__list__content"><%= @post.content %></div>
       </div>
       <div class="posts__time">
@@ -24,4 +24,5 @@
 
     </div>
   </div>
+
 </div>

@@ -17,12 +17,16 @@
   <% end %>
 
 <ul class="posts">
-  <% @posts.each do |post| %>
+  <%  @posts.each do |post| %>
 
   <%= link_to("/posts/#{post.id}/show") do %>
+
     <li class="posts__list">
-      <p><%= post.content %></p>
+      <img src="<%= "/user_images/#{post.user.image_name}" %>">
+      <div class="posts__list__name"><%= post.user.name %></div>
+      <div class="posts__list__content"><%= post.content %></div>
     </li>
+
   <% end %>
 
   <% end %>

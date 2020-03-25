@@ -107,10 +107,67 @@
         margin: 40px;
         color: rgb(83, 83, 83);
     }
-    .users-show-box {
+    & .posts {
+        position: relative;
+        width: 90%;
+        // height: 100vh;
+        height: auto;
+        min-height: auto;
+        left: 40px;
+        padding: 30px;
+        background: rgba(0, 190, 190, 0.104);
+        &__list {
+            position: relative;
+            top: 0px;
+            padding: 25px;
+            width: 80%;
+            height: 100%;
+            background: white;
+            border: 1.5px solid rgba(143, 143, 143, 0.219);
+            border-radius: 4px;
+            margin: 0 auto;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            box-shadow: 0 32px 30px -30px rgba(53, 47, 47, 0.15);
+            overflow: hidden;
+            font-weight: 700;
+            color: rgb(83, 83, 83);
+            &__name {
+              text-decoration: underline;
+              position: absolute;
+              top: 20px;
+              left: 100px;
+              font-size: 1.2rem;
+              font-weight: 600;
+              color: rgb(83, 83, 83);
+              letter-spacing: 3px;
+            }
+            &__content {
+              position: absolute;
+              top: 60px;
+              left: 100px;
+              font-size: 1.2rem;
+              font-weight: 500;
+              color: rgb(83, 83, 83);
+              letter-spacing: 3px;
+            }
+            & > img {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              border: 0.5px solid rgba(128, 128, 128, 0.542);
+            }
+            & a {
+              font-weight: 500;
+              color: rgb(83, 83, 83);
+            }
+        }
+    }
+    & .users-show-box {
         margin-top: 50px;
         margin-left: 40px;
-        width: 750px;
+        width: 90%;
         height: 350px;
         & .users-show-index {
             border: 1px solid rgba(160, 160, 160, 0.300);
@@ -119,7 +176,7 @@
             text-align: center;
             color: rgb(83, 83, 83);
             height: 350px;
-            width: 750px;
+            width: 100%;
             display: flex;
             & .users-show-img {
               width: 50%;
