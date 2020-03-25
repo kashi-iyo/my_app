@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def new
-
+    @user = User.new
   end
 
   def create
@@ -19,6 +19,7 @@ class UsersController < ApplicationController
       image_name: "default_img.png"
     )
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = "登録が完了したお"
       redirect_to("/users/index")
     else

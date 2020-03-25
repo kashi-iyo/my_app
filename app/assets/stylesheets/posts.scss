@@ -24,7 +24,8 @@
     & .posts {
         position: relative;
         width: 90%;
-        height: 100vh;
+        // height: 100vh;
+        height: auto;
         min-height: auto;
         left: 50px;
         background: rgba(0, 190, 190, 0.104);
@@ -39,7 +40,7 @@
             border-radius: 4px;
             margin: 0 auto;
             margin-bottom: 5px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             letter-spacing: 3px;
             box-shadow: 0 32px 30px -30px rgba(53, 47, 47, 0.15);
             overflow: hidden;
@@ -101,7 +102,7 @@
   display: inline-block;
   position: relative;
   left: 485px;
-  top: 150px;
+  top: 250px;
   width: 90px;
   height: 40px;
   border-radius: 4px;
@@ -120,8 +121,8 @@
 .destroy-btn {
   display: inline-block;
   position: relative;
-  left: 490px;
-  top: 150px;
+  left: 487px;
+  top: 250px;
   width: 90px;
   height: 40px;
   border-radius: 4px;
@@ -150,8 +151,8 @@
     background: rgba(0, 190, 190, 0.104);
       &__time {
         position: relative;
-        left: 450px;
-        top: 140px;
+        left: 470px;
+        top: 225px;
         width: 200px;
         color: rgb(83, 83, 83);
         padding: 5px 0;
@@ -160,11 +161,11 @@
       }
       &__list {
           position: absolute;
-          top: 20px;
+          top: 20%;
           left: 10%;
-          padding: 30px;
+          padding: 10px;
           width: 75%;
-          height: 150px;
+          height: 180px;
           background: white;
           border: 1.5px solid rgba(143, 143, 143, 0.219);
           border-radius: 6px;
@@ -172,10 +173,31 @@
           margin-bottom: 5px;
           box-shadow: 0 32px 30px -30px rgba(53, 47, 47, 0.15);
           overflow: hidden;
-          font-size: 1.1rem;
-          font-weight: 700;
-          color: rgb(83, 83, 83);
-          letter-spacing: 3px;
+          &__name {
+            text-decoration: underline;
+            position: absolute;
+            top: 10px;
+            left: 80px;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: rgb(83, 83, 83);
+            letter-spacing: 3px;
+          }
+          &__content {
+            position: absolute;
+            top: 60px;
+            left: 80px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: rgb(83, 83, 83);
+            letter-spacing: 3px;
+          }
+          & > img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 0.5px solid rgba(128, 128, 128, 0.542);
+          }
           & a {
             color: rgb(0, 78, 78);
           }
