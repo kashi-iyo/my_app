@@ -66,9 +66,9 @@
               color: rgb(83, 83, 83);
               letter-spacing: 3px;
             }
-            & > img {
-              width: 60px;
-              height: 60px;
+            & img {
+              width: 50px;
+              height: 50px;
               border-radius: 50%;
               border: 0.5px solid rgba(128, 128, 128, 0.542);
             }
@@ -78,6 +78,45 @@
             }
         }
     }
+}
+
+// いいね機能
+.posts__list__notlikes {
+  position: absolute;
+  right: 30px;
+  width: 45px;
+  height: 20px;
+  border-radius: 4px;
+  background: rgb(0, 78, 78);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.posts__list__likes {
+  position: absolute;
+  right: 30px;
+  width: 45px;
+  height: 20px;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  padding-left: 1px;
+  padding-top: 3px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: rgba(83, 83, 83, 0.9);
+  border: 1.5px solid rgba(83, 83, 83, 0.7);
+  cursor: pointer;
+}
+.posts__list__likescount {
+  position: absolute;
+  bottom: 2px;
+  right: 10px;
+  color: rgb(0, 78, 78);
+  text-decoration: underline;
 }
 
 // 新規投稿
@@ -94,10 +133,10 @@
           padding: 20px;
           position: absolute;
           border: transparent;
-          width: 500px;
+          width: 70%;
           height: 150px;
           top: 50px;
-          left: 130px;
+          left: 110px;
           border-radius: 4px;
           outline: none;
           color: rgb(83, 83, 83);
@@ -108,7 +147,7 @@
       }
       & input[type="submit"] {
           position: absolute;
-          left: 420px;
+          left: 500px;
           width: 100px;
           height: 50px;
           border: transparent;
@@ -124,6 +163,7 @@
   }
 }
 
+// 編集ボタン、削除ボタン
 .edit-btn {
   display: inline-block;
   position: relative;
@@ -178,7 +218,7 @@
       &__time {
         position: relative;
         left: 470px;
-        top: 225px;
+        top: 195px;
         width: 200px;
         color: rgb(83, 83, 83);
         padding: 5px 0;

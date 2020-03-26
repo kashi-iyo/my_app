@@ -1,5 +1,5 @@
 <div class="PostsWrap">
-  <h1 class="posts-h1">チャット形式やで</h1>
+  <h1 class="posts-h1">チャット形式でやんす</h1>
 
   <%= form_tag("/posts/create") do %>
 
@@ -19,17 +19,31 @@
 <ul class="posts">
   <%  @posts.each do |post| %>
 
-  <%= link_to("/posts/#{post.id}/show") do %>
+    <%= link_to("/posts/#{post.id}/show") do %>
 
-    <li class="posts__list">
-      <img src="<%= "/user_images/#{post.user.image_name}" %>">
-      <div class="posts__list__name"><%= post.user.name %></div>
-      <div class="posts__list__content"><%= post.content %></div>
+      <li class="posts__list">
+        <img src="<%= "/user_images/#{post.user.image_name}" %>">
+        <div class="posts__list__name"><%= post.user.name %></div>
+        <div class="posts__list__content"><%= post.content %></div>
+
+
+      <% if Like.find_by(user_id: @current_user.id, post_id: post.id) %>
+        <%= link_to("/likes/#{post.id}/destroy", {method: "post"}) do %>
+          <div class="posts__list__notlikes">Like!</div>
+        <% end %>
+      <% else %>
+        <%= link_to("/likes/#{post.id}/create", {method: "post"}) do %>
+          <div class="posts__list__likes">Like?</div>
+        <% end %>
+      <% end %>
+
+      <div class="posts__list__likescount"><%= post.likes %></div>
+
     </li>
 
   <% end %>
 
   <% end %>
-  </ul>
+</ul>
 
 </div>

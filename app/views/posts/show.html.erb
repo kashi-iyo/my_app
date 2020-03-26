@@ -11,6 +11,7 @@
       <div class="posts__time">
         <%= @post.updated_at %>
       </div>
+      <% if @current_user.id == params[:id].to_i %>
       <div class="edit-btn">
 
         <%= link_to("編集", "/posts/#{@post.id}/edit") %>
@@ -21,7 +22,7 @@
         <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
 
       </div>
-
+      <% end %>
     </div>
   </div>
 
